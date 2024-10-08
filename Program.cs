@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using System;
+using Models;
 
 ProgramaEducativo programa = new ProgramaEducativo();
 
@@ -22,6 +23,10 @@ estudiante1.AñadirCalificacion(diseño, 9.0);
 
 estudiante2.AñadirCalificacion(servidor, 7.5);
 estudiante2.AñadirCalificacion(cliente, 8.5);
+
+//Modificar calificaciones
+estudiante1.ModificarCalificacion(cliente, 9.33);
+estudiante2.ModificarCalificacion(servidor, 7.33);
 
 // Mostrar estudiantes
 programa.MostrarEstudiantes();
