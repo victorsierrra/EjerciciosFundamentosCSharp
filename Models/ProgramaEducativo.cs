@@ -81,7 +81,7 @@ class ProgramaEducativo
         }
 
 
-        return contadorEstudiantes > 0 ? sumaPromedios / contadorEstudiantes : 0;
+        return contadorEstudiantes > 0 ? Math.Truncate(sumaPromedios / contadorEstudiantes * 100) / 100 : 0;
     }
 
     public void GenerarReporteEstudiante(Estudiante estudiante)

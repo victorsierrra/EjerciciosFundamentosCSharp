@@ -40,6 +40,9 @@ programa.EliminarEstudiante("Fernando");
 //Buscar estudiante
 programa.BuscarEstudiantesPorNombre("Alejandro");
 
+//Calcular promedio global
+Console.WriteLine($"El promedio global de las calificaciones es {programa.CalcularPromedioGlobal()}");
+
 // Mostrar estudiantes
 programa.MostrarEstudiantes();
 
