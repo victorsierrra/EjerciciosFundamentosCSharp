@@ -12,9 +12,13 @@ Asignatura diseño = new("Diseño", 8);
 var estudiante1 = new Estudiante("Vanessa Llorente");
 Estudiante estudiante2 = new Estudiante("Alejandro Giménez");
 
+//Crear estudiante para borrar
+Estudiante estudianteBorrado = new Estudiante("Jaimito");
+
 // Añadir estudiantes al programa educativo
 programa.AñadirEstudiante(estudiante1);
 programa.AñadirEstudiante(estudiante2);
+programa.AñadirEstudiante(estudianteBorrado);
 
 // Asignar calificaciones
 estudiante1.AñadirCalificacion(servidor, 9.5);
@@ -27,6 +31,10 @@ estudiante2.AñadirCalificacion(cliente, 8.5);
 //Modificar calificaciones
 estudiante1.ModificarCalificacion(cliente, 9.33);
 estudiante2.ModificarCalificacion(servidor, 7.33);
+
+//Eliminar estudiante
+programa.EliminarEstudiante("Jaimito");
+programa.EliminarEstudiante("Fernando");
 
 // Mostrar estudiantes
 programa.MostrarEstudiantes();
