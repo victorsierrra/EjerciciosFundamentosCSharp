@@ -36,12 +36,14 @@ estudiante2.ModificarCalificacion(servidor, 7.33);
 programa.EliminarEstudiante("Jaimito");
 programa.EliminarEstudiante("Fernando");
 
-
 //Buscar estudiante
 programa.BuscarEstudiantesPorNombre("Alejandro");
 
 //Calcular promedio global
 Console.WriteLine($"El promedio global de las calificaciones es {programa.CalcularPromedioGlobal()}");
+
+//Generar reporte estudiante
+programa.GenerarReporteEstudiante(estudiante1);
 
 // Mostrar estudiantes
 programa.MostrarEstudiantes();
