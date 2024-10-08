@@ -49,6 +49,9 @@ class ProgramaEducativo
     public List<Estudiante> BuscarEstudiantesPorNombre(string parteDelNombre)
     {
         List<Estudiante> resultados = estudiantes.FindAll(e => e.Nombre.ToLower().Contains(parteDelNombre.ToLower()));
+        foreach(var resultado in resultados){
+            Console.WriteLine($"Estudiante {resultado.Nombre}");
+        }
         return resultados;
     }
 

@@ -36,6 +36,10 @@ estudiante2.ModificarCalificacion(servidor, 7.33);
 programa.EliminarEstudiante("Jaimito");
 programa.EliminarEstudiante("Fernando");
 
+
+//Buscar estudiante
+programa.BuscarEstudiantesPorNombre("Alejandro");
+
 // Mostrar estudiantes
 programa.MostrarEstudiantes();
 
