@@ -20,6 +20,10 @@ programa.AñadirEstudiante(estudiante1);
 programa.AñadirEstudiante(estudiante2);
 programa.AñadirEstudiante(estudianteBorrado);
 
+// Añadir asignatura al programa educativo
+programa.AñadirAsignatura(servidor);
+programa.AñadirAsignatura(servidor);
+
 // Asignar calificaciones
 estudiante1.AñadirCalificacion(servidor, 9.5);
 estudiante1.AñadirCalificacion(cliente, 8.0);
