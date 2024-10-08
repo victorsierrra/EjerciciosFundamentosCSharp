@@ -13,7 +13,19 @@ class Estudiante
 
     public void AñadirCalificacion(Asignatura asignatura, double calificacion)
     {
-        calificaciones[asignatura] = calificacion;
+        ValidarCalificacion(asignatura, calificacion);
+    }
+
+    public void ValidarCalificacion(Asignatura asignatura, double calificacion)
+    {
+        if (calificacion <=10 || calificacion >=0)
+        {
+            calificaciones[asignatura] = calificacion;
+            Console.WriteLine($"Esta calificacion ha sido añadida {calificacion}");
+        }
+        else{
+            Console.WriteLine($"Esta calificacion {calificacion} no es valida");
+        }
     }
 
     public void MostrarCalificaciones()
