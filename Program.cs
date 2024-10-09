@@ -23,7 +23,8 @@ programa.AñadirEstudiante(estudianteBorrado);
 programa.AñadirEstudiante(estudiante3);
 // Añadir asignatura al programa educativo
 programa.AñadirAsignatura(servidor);
-programa.AñadirAsignatura(servidor);
+programa.AñadirAsignatura(cliente);
+programa.AñadirAsignatura(diseño);
 
 // Asignar calificaciones
 estudiante1.AñadirCalificacion(servidor, 9.5);
@@ -64,6 +65,9 @@ programa.MostrarEstudiantes();
 
 // Mostrar estudiantes suspensos
 programa.ListarEstudiantesSuspensos();
+
+// Mostrar asignaturas
+programa.MostrarAsignaturas();
 
 // Mostrar calificaciones de un estudiante específico
 Estudiante estudianteSeleccionado = programa.ObtenerEstudiante("Vanessa Llorente");

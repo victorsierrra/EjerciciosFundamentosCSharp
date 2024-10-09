@@ -53,6 +53,16 @@ class ProgramaEducativo
         }
     }
 
+        public void MostrarAsignaturas()
+    {
+        Console.WriteLine("\b--- Lista de Asignaturas ---");
+        foreach(var asignatura in  asignaturas)
+        {
+            asignatura.MostrarDetalles();
+        }
+    }
+
+
     public void MostrarRankingEstudiantes()
     {
         Console.WriteLine("\n--- Ranking de Estudiantes ---");
