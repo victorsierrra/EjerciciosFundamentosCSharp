@@ -67,7 +67,24 @@ class ProgramaEducativo
         foreach (var rank in ranking){
             Console.WriteLine($"{rank.Key}: {rank.Value:F2}");
         }
+    }
 
+        public void ListarEstudiantesSuspensos()
+    {
+        List<Estudiante> estudiantesSuspensos =  new List<Estudiante>();
+
+        Console.WriteLine("\n--- Estudiantes con Notas Suspensas ---");
+        foreach (var estudiante in estudiantes)
+        {
+            if (estudiante.CalcularPromedio() < 5.0)
+            {
+                estudiantesSuspensos.Add(estudiante);
+            }
+        }
+        foreach (var suspensos in estudiantesSuspensos)
+        {
+            Console.WriteLine($"{suspensos.Nombre} está en riesgo de suspender con un promedio de {suspensos.CalcularPromedio()}");
+        }
     }
 
     public Estudiante ObtenerEstudiante(string nombre)
