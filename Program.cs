@@ -33,7 +33,7 @@ estudiante2.AñadirCalificacion(servidor, 7.5);
 estudiante2.AñadirCalificacion(cliente, 8.5);
 
 //Modificar calificaciones
-estudiante1.ModificarCalificacion(cliente, 9.33);
+estudiante1.ModificarCalificacion(cliente, 0);  //Actualizada a 0 para comprobar el orden del ranking de estudiantes
 estudiante2.ModificarCalificacion(servidor, 7.33);
 
 //Eliminar estudiante
@@ -48,6 +48,10 @@ Console.WriteLine($"El promedio global de las calificaciones es {programa.Calcul
 
 //Generar reporte estudiante
 programa.GenerarReporteEstudiante(estudiante1);
+programa.GenerarReporteEstudiante(estudiante2);
+
+//Generar ranking estudiantes
+programa.MostrarRankingEstudiantes();
 
 // Mostrar estudiantes
 programa.MostrarEstudiantes();

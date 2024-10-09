@@ -1,10 +1,14 @@
 
+using System.Linq;
+using System.Runtime.CompilerServices;
+
 namespace Models;
 
 class ProgramaEducativo
 {
     private List<Estudiante> estudiantes;
     private List<Asignatura> asignaturas;
+
     
 
     public ProgramaEducativo()
@@ -47,6 +51,23 @@ class ProgramaEducativo
         {
             Console.WriteLine($"Estudiante: {estudiante.Nombre}");
         }
+    }
+
+    public void MostrarRankingEstudiantes()
+    {
+        Console.WriteLine("\n--- Ranking de Estudiantes ---");
+        Dictionary <string,  double> ranking = new Dictionary<string, double>();
+
+        foreach (var estudiante in estudiantes)
+        {
+            ranking.Add(estudiante.Nombre, estudiante.CalcularPromedio());
+            //Console.WriteLine(estudiante.Nombre + estudiante.CalcularPromedio());
+        }
+        ranking = ranking.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+        foreach (var rank in ranking){
+            Console.WriteLine($"{rank.Key}: {rank.Value:F2}");
+        }
+
     }
 
     public Estudiante ObtenerEstudiante(string nombre)

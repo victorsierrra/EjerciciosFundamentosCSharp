@@ -44,7 +44,7 @@ class Estudiante
         {
             suma += entrada.Value;
         }
-        return calificaciones.Count > 0 ? suma / calificaciones.Count : 0;
+        return calificaciones.Count > 0 ? Math.Truncate(suma / calificaciones.Count *100) /100 : 0;
     }
 
     public void ModificarCalificacion(Asignatura asignatura, double nuevaCalificacion)
